@@ -6,15 +6,16 @@
 	
 	<complexType name="Patient">
 		<sequence>
-			<element name="id" type="tns:ID" />
 			<element name="name" type="tns:String15Chars" />
 			<element name="age" type="int" />
 			<element name="dob" type="date" />
-			<element name="email" type="string" />
+			<element name="email" type="string" maxOccurs="2" minOccurs="0" />
 			<element name="gender" type="tns:Gender" />
-			<element name="phone" type="string" />
+			<element name="phone" type="string" maxOccurs="2"/>
 			<element name="payment" type="tns:PaymentType"/>
 		</sequence>	
+		
+		<attribute name="id" type="tns:ID"/>
 	</complexType>
 	
 	<complexType name="PaymentType">
